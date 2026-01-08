@@ -1,0 +1,114 @@
+.tmx-nav {
+  width: 100%;
+  position: sticky;
+  top: 0;
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  z-index: 50;
+}
+
+.dark .tmx-nav {
+  background: rgba(20, 20, 20, 0.5);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+.navbar-gradient {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.7) 0%,
+    rgba(240, 240, 255, 0.6) 40%,
+    rgba(230, 230, 255, 0.4) 100%
+  );
+}
+
+.dark .navbar-gradient {
+  background: linear-gradient(
+    135deg,
+    rgba(20, 20, 30, 0.9) 0%,
+    rgba(30, 30, 40, 0.7) 50%,
+    rgba(45, 45, 60, 0.6) 100%
+  );
+}
+
+
+.tmx-nav-container {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 0.7rem 1.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.tmx-logo-section {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.tmx-brand {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+/* Desktop links */
+.tmx-links {
+  display: flex;
+  gap: 2rem;
+  font-size: 1rem;
+}
+
+.tmx-links a {
+  opacity: 0.8;
+  transition: 0.2s ease;
+}
+
+.tmx-links a:hover {
+  opacity: 1;
+  transform: translateY(-1px);
+}
+
+/* Right items */
+.tmx-right {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* Login button */
+.tmx-login-btn {
+  padding: 6px 16px;
+  border-radius: 8px;
+  background: var(--tmx-primary, #0ea5e9);
+  border: none;
+  color: white;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.tmx-login-btn:hover {
+  opacity: 0.85;
+}
+
+/* Mobile menu button */
+.tmx-mobile-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.6rem;
+  cursor: pointer;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .tmx-links {
+    display: none;
+  }
+  .tmx-login-btn {
+    display: none;
+  }
+  .tmx-mobile-toggle {
+    display: block;
+  }
+}

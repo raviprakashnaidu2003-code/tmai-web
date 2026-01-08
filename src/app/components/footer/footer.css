@@ -1,0 +1,16 @@
+.footer-gradient {
+    margin-top: auto;
+  background: linear-gradient(
+    to right,
+    rgba(240, 240, 255, 0.6),
+    rgba(230, 230, 255, 0.5)
+  );
+}
+
+.dark .footer-gradient {
+  background: linear-gradient(
+    to right,
+    rgba(25, 25, 35, 0.9),
+    rgba(40, 40, 55, 0.7)
+  );
+}
