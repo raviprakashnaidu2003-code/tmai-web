@@ -1,0 +1,80 @@
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none"
+     xmlns="http://www.w3.org/2000/svg">
+
+  <!-- Enhanced Vibrant Gradient -->
+  <defs>
+    <linearGradient id="vibrantHolo" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00E4FF"/>     <!-- electric aqua -->
+      <stop offset="25%" stop-color="#2AF4FF"/>    <!-- cyan -->
+      <stop offset="55%" stop-color="#6F7CFF"/>    <!-- light purple -->
+      <stop offset="80%" stop-color="#FF4DFF"/>    <!-- neon magenta (new) -->
+      <stop offset="100%" stop-color="#4D45FF"/>   <!-- violet -->
+    </linearGradient>
+
+    <radialGradient id="softGlowMulti" cx="50%" cy="50%" r="70%">
+      <stop offset="0%" stop-color="#99F7FF" stop-opacity="0.45"/>
+      <stop offset="45%" stop-color="#C399FF" stop-opacity="0.25"/>
+      <stop offset="80%" stop-color="#FF7BFF" stop-opacity="0.18"/>
+      <stop offset="100%" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+
+  <!-- OUTER RING (visible + vibrant) -->
+  <circle cx="32" cy="32" r="28"
+    stroke="url(#vibrantHolo)" stroke-width="2.4" opacity="1">
+    <animate attributeName="opacity"
+      values="0.55;1;0.55" dur="4s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- Soft Aura Glow -->
+  <circle cx="32" cy="32" r="31"
+    stroke="url(#softGlowMulti)" stroke-width="5"/>
+
+
+  <!-- Main Hologram Circle -->
+  <circle cx="32" cy="32" r="23"
+    stroke="url(#vibrantHolo)" stroke-width="2" opacity="0.92">
+    <animate attributeName="opacity"
+      values="0.4;1;0.4" dur="3s" repeatCount="indefinite"/>
+  </circle>
+
+
+  <!-- Rotating Warp Rings -->
+  <g opacity="0.8">
+    <ellipse cx="32" cy="32" rx="21" ry="9.5"
+      stroke="url(#vibrantHolo)" stroke-width="1.6"/>
+    <ellipse cx="32" cy="32" rx="21" ry="9.5"
+      stroke="url(#vibrantHolo)" stroke-width="1.6" transform="rotate(60 32 32)"/>
+    <ellipse cx="32" cy="32" rx="21" ry="9.5"
+      stroke="url(#vibrantHolo)" stroke-width="1.6" transform="rotate(-60 32 32)"/>
+
+    <animateTransform
+      attributeName="transform"
+      type="rotate"
+      from="0 32 32"
+      to="360 32 32"
+      dur="11s"
+      repeatCount="indefinite"/>
+  </g>
+
+
+  <!-- Inner Halo -->
+  <circle cx="32" cy="32" r="12"
+    stroke="url(#vibrantHolo)" stroke-width="1.8" opacity="0.9">
+    <animate attributeName="opacity"
+      values="0.45;1;0.45" dur="2.6s" repeatCount="indefinite"/>
+  </circle>
+
+
+  <!-- Core -->
+  <circle cx="32" cy="32" r="4.8"
+    fill="url(#vibrantHolo)"
+    style="filter: drop-shadow(0 0 12px rgba(255,120,255,0.9));">
+    <animate attributeName="r"
+      values="4.8;6.5;4.8" dur="1.8s" repeatCount="indefinite"/>
+    <animate attributeName="opacity"
+      values="0.8;1;0.8" dur="1.8s" repeatCount="indefinite"/>
+  </circle>
+
+</svg>

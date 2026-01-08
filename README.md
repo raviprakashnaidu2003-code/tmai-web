@@ -1,1 +1,2 @@
-# tmai-web
+# tmai-ui
+Front end UI repository
